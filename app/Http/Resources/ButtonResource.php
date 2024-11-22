@@ -15,13 +15,10 @@ class ButtonResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'data' => [
-                'id' => $this->id,
-                'title' => $this->title,
-                'link' => $this->link,
-                'color' => $this->color,
-            ],
-            'success' => true
+            'id' => $this->id,
+            'title' => $this->title,
+            'link' => $this->link,
+            'color' => $this->color,
         ];
     }
 }
