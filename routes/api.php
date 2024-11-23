@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(ButtonsController::class)
     ->prefix('/buttons')
+    ->middleware('auth:sanctum')
     ->group(function () {
         Route::get('/', 'list');
         Route::get('/{id}', 'show');
