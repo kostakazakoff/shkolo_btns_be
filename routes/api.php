@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ButtonsController;
+use Illuminate\Http\Middleware\HandleCors;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/user', function (Request $request) {
@@ -9,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(ButtonsController::class)
     ->prefix('/buttons')
+    ->middleware(HandleCors::class)
     // ->middleware('cors')
     ->group(function () {
         Route::get('/', 'list');
