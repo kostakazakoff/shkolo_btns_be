@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(ButtonsController::class)
     ->prefix('/buttons')
-    ->middleware(HandleCors::class)
     // ->middleware('cors')
     ->group(function () {
         Route::get('/', 'list');
